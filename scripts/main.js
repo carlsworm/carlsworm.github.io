@@ -12,12 +12,12 @@ let myButton = document.querySelector('button');
 let myHeading = document.querySelector('h1');
 
 function setUserName() {
-  let myName = prompt('ÇëÊäÈëÄãµÄÃû×Ö¡£');
+  let myName = prompt('è¯·è¾“å…¥ä½ çš„åå­—ã€‚');
   if(!myName || myName === null) {
     setUserName();
   } else {
     localStorage.setItem('name', myName);
-    myHeading.innerHTML = 'Mozilla ¿á±ĞÁË£¬' + myName;
+    myHeading.innerHTML = 'Mozilla é…·æ¯™ï¼Œ' + myName;
   }
 }
 
@@ -25,7 +25,7 @@ if(!localStorage.getItem('name')) {
   setUserName();
 } else {
   let storedName = localStorage.getItem('name');
-  myHeading.textContent = 'Mozilla ¿á±ĞÁË£¬' + storedName;
+  myHeading.textContent = 'Mozilla é…·æ¯™ï¼Œ' + storedName;
 }
 
 myButton.onclick = function() {
